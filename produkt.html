@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <title>Produkt</title>
 </head>
 <body class="product">
@@ -29,13 +32,35 @@
             <li><a href="produktliste.html">Nike</a></li>
             <li> Sahara Team India Fanwear Round Neck Jersey</li>
         </ol>
-        <img src="img/woman.jpg" alt="kona">
+        <img src="img/sahara.webp" alt="bolur">
         <section class="purchaseBox">
             <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
             <p>Nike I Tshirt</p>
             <form>
-                <label for=""></label>
+                <label>
+                    Choose a size
+                    <select name="size">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                </label>
+                <button>Add to basket</button>
             </form>
+        </section>
+        <section class="info">
+            <h2>Product Information</h2>
+            <dl>
+                <dt>Model name</dt>
+                <dd>Sahara Team India Fanwear Round Neck Jersey</dd>
+                <dt>Color</dt>
+                <dd>Blue</dd>
+                <dt>Inventory number</dt>
+                <dd>1163</dd>
+            </dl>
+            <h1>Nike</h1>
+            <p>Nike, creating experiences for today´s athltete</p>
         </section>
     </main>
 </body>

@@ -1,0 +1,112 @@
+.mainNav{
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        font-style: normal; 
+}
+span{
+    color: rgb(255, 0, 0);
+}
+.mainNav > a {
+    display: block;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3.052rem;
+    letter-spacing: -0.1rem;
+    line-height: 1;
+}
+.mainNav h1 span {
+    display: inline-block;
+    transform: scaleX(-1) translateX(-0.2rem);
+}
+a{
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--text-decoration-color);
+    -webkit-text-decoration-color: var(--text-decoration-color);
+    border-radius: 5px;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    margin-top: 1em;
+    font-weight: bold;
+}
+h2 {
+    font-size: 2.441rem;
+    letter-spacing: -0.12rem;
+    line-height: 1.2;
+}
+
+.categorylist a {
+    text-decoration: none;
+    padding: 2em;
+    color: rgb(246, 236, 236);
+    background-color: rgb(89, 86, 86);
+}
+.mainNav > a {
+    display: block;
+    text-decoration: none;
+}
+
+.productlist article {
+    margin-bottom: 1rem;
+}
+ol {
+    list-style: decimal outside;
+}
+.purchaseBox {
+    background: #d8d8d8;
+    color: var(--background-color);
+    padding: 1rem;
+}
+.purchaseBox form label {
+    gap: 1rem;
+}
+
+.product select {
+    min-width: 100px;
+}
+select {
+    -webkit-appearance: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: black;
+    height: 2.5rem;
+    background-color: rgb(248, 246, 246);
+    background-image: blue;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: center right 0.5rem;
+}
+option {
+    font-weight: normal;
+    display: block;
+    padding-block-start: 0px;
+    padding-block-end: 1px;
+    min-block-size: 1.2em;
+    padding-inline: 2px;
+    white-space: nowrap;
+}
+.purchaseBox button {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+}
+.info {
+    order: 0;
+}
+.info {
+    padding: 1rem;
+}
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin-left: 1rem;
+}
