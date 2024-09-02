@@ -4,7 +4,7 @@
     font-style: normal; 
 }
 span{
-    color: rgb(158, 222, 198);
+    color: rgb(101, 220, 176);
 }
 .mainNav > a {
     display: block;
@@ -114,4 +114,14 @@ dt {
 
 dd {
     margin-left: 1rem;
+}
+.productlist article.soldOut::before {
+    content: "Sold Out";
+    position: absolute;
+    background: black;
+    color: white;
+    padding: 1rem;
+}
+.productlist article.soldOut img {
+    opacity: 0.5;
 }
