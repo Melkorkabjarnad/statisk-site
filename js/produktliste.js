@@ -1,3 +1,6 @@
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
+
 fetch("https://kea-alt-del.dk/t7/api/products")
 .then(res=>res.json())
 .then(data=>showProducts(data))
@@ -9,7 +12,7 @@ function showProducts(products){
 }
 
 function showProduct(product){
-    //console.log(product);
+    console.log(product);
     //fang template
     const template = document.querySelector("#smallProductTemplate").content;
     //lav en kopi
