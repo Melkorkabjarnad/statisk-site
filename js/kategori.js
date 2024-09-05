@@ -18,6 +18,20 @@ function showCategory(cat){
     document.querySelector(".categorylist").appendChild(clone);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*const categorylist = document.querySelector(".categoryList");
 const params = new URLSearchParams(document.location.search);
 const category = params.get("category");

@@ -1,9 +1,18 @@
+window.addEventListener("DOMContentLoaded", init);
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
+let productsURI = undefined;
 
-fetch("https://kea-alt-del.dk/t7/api/products")
-.then(res=>res.json())
-.then(data=>showProducts(data))
+function init (){
+    if(urlParams.has("category")){
+        productsURI = `https://kea-alt-del.dk/t7/api/products?category=${category}`;
+    } else{
+        productsURI = `https://kea-alt-del.dk/t7/api/products?limit=10`;
+    }
+    fetch(productsURI)
+        .then(res=>res.json())
+        .then(data=>showProducts(data))
+}
 
 
 function showProducts(products){
@@ -24,32 +33,11 @@ function showProduct(product){
         copy.querySelector("article").classList.add("soldOut");
     }
     copy.querySelector(".read-more").setAttribute("href", `produkt.html?id=${product.id}`);
+    copy.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+    copy.querySelector("img").alt = `image and ${product.productdisplayname}`;
+    copy.querySelector(".read-more").setAttribute("href",`produkt.html?id=${product.id}`);
     //appende
     document.querySelector("main").appendChild(copy);
 }
-/*
- <article class="smallProduct">
-            <img src="img/sahara.webp" alt="sahara shirt">
-            <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
-            <p class="subtle">Tshirts / Nike</p>
-            <p class="price">
-                DKK 1595,-
-            </p>
-            <a href="produkt.html">Read More</a>
-        </article>
-{
-    "id": 1165,
-    "gender": "Men",
-    "category": "Apparel",
-    "subcategory": "Topwear",
-    "articletype": "Tshirts",
-    "season": "Summer",
-    "productionyear": 2013,
-    "usagetype": "Sports",
-    "productdisplayname": "Mean Team India Cricket Jersey",
-    "price": 2495,
-    "discount": 45,
-    "brandname": "Nike",
-    "soldout": 0
-}
-*/
+
+
